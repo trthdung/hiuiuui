@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu & Bài Tập</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+            color: #1a237e;
+            text-align: center;
+            position: relative;
+        }
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://cdn11.dienmaycholon.vn/filewebdmclnew/public/userupload/files/Image%20FP_2024/anh-meo-13.png') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            background: #0d47a1;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            background: #1565c0;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+        .show {
+            display: block;
+        }
+        .dropdown {
+            margin-top: 20px;
+            text-align: center;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: bold;
+        }
+        .buoi {
+            display: none;
+        }
+        .buoi.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-img"></div> <!-- Ảnh nền hình mèo -->
+    <div class="container">
+        <h1>Trần Thuỳ Dung</h1>
+        <div class="nav">
+            <a href="#" onclick="showContent('intro')">Giới Thiệu</a>
+            <a href="#" onclick="showContent('baiTap')">Bài Tập</a>
+        </div>
+
+        <div id="intro" class="content show">
+            <h2>Giới Thiệu</h2>
+            <p>Họ và tên: Trần Thuỳ Dung</p>
+            <p>Ngày sinh: 13/01/2006</p>
+            <p>Quê quán: Nam Định</p>
+            <p>Trình độ học vấn: Đại học</p>
+            <p>Ngành học: Công nghệ thông tin</p>
+            <p>Sở thích: Ăn uống, nghe nhạc, đọc sách</p>
+        </div>
+
+        <div id="baiTap" class="content">
+            <h2>Danh Sách Bài Tập</h2>
+            <div class="dropdown">
+                <label for="buoi">Chọn Buổi:</label>
+                <select id="buoi" onchange="showBuoi()">
+                    <option value="buoi1">Buổi 1</option>
+                    <option value="buoi2">Buổi 2</option>
+                    <option value="buoi3">Buổi 3</option>
+                    <option value="buoi4">Buổi 4</option>
+                </select>
+            </div>
+
+            <div id="buoi1" class="buoi show">
+                <ul>
+                    <li><a href="bai1.1b1.html">Bài tập 1</a></li>
+                    <li><a href="bai2.1b1.html">Bài tập 2.1</a></li>
+                    <li><a href="bai2.2b1.html">Bài tập 2.2</a></li>
+                    <li><a href="bai2.3b1.html">Bài tập 2.3</a></li>
+                    <li><a href="bai3b1.html">Bài tập 3</a></li>
+                    <li><a href="bai4b1.html">Bài tập 4</a></li>
+                </ul>
+            </div>
+
+            <div id="buoi2" class="buoi">
+                <ul>
+                    <li><a href="bai1b2.html">Bài tập 1</a></li>
+                    <li><a href="bai2.1b2.html">Bài tập 2.1</a></li>
+                    <li><a href="bai2.2b2.html">Bài tập 2.2</a></li>
+                    <li><a href="bai2.3b2.html">Bài tập 2.3</a></li>
+                    <li><a href="bai3b2.html">Bài tập 3</a></li>
+                </ul>
+            </div>
+
+            <div id="buoi3" class="buoi">
+                <ul>
+                    <li><a href="bai11b4.html">Bài tập 1.1</a></li>
+                    <li><a href="bai12b4.html">Bài tập 1.2</a></li>
+                    <li><a href="bai2b4.html">Bài tập 2</a></li>
+                    <li><a href="bai31b4.html">Bài tập 3.1</a></li>
+                    <li><a href="bai32b4.html">Bài tập 3.2</a></li>
+                    <li><a href="bai33b4.html">Bài tập 3.3</a></li>
+                </ul>
+            </div>
+            <div id="buoi4" class="buoi">
+                <ul>
+                    <li><a href="bai1b5.html">Bài tập 1</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('show'));
+            document.getElementById(id).classList.add('show');
+        }
+
+        function showBuoi() {
+            let selectedBuoi = document.getElementById("buoi").value;
+            
+            document.querySelectorAll('.buoi').forEach(el => el.classList.remove('show'));
+            
+            let buoiToShow = document.getElementById(selectedBuoi);
+            if (buoiToShow) {
+                buoiToShow.classList.add('show');
+            }
+        }
+
+        // Đảm bảo khi tải trang, chỉ hiển thị Buổi 1
+        document.addEventListener("DOMContentLoaded", function() {
+            showBuoi();
+        });
+    </script>
+</body>
+</html>
