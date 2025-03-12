@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình bày bảng và ảnh</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center; 
+            gap: 3px; 
+        }
+        .image-container img {
+            width: 30px;
+            width: 30%;
+            opacity: 0.5;        }
+        .image-container img:hover {
+            opacity: 1;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: #526ddc;}
+    </style>
+</head>
+<body>
+    <h2>Ví dụ về trình bày bảng</h2>
+    <table>
+        <tr>
+            <th>Họ và tên</th>
+            <th>Giới tính</th>
+            <th>Quê quán</th>
+        </tr>
+        <tr>
+            <td>Trần Văn Nam</td>
+            <td>Nam</td>
+            <td>Hà Tĩnh</td>
+        </tr>
+        <tr>
+            <td>Lê Kiều Trang</td>
+            <td>Nữ</td>
+            <td>Quảng Ninh</td>
+        </tr>
+        <tr>
+            <td>Phạm Trí Tài</td>
+            <td>Nam</td>
+            <td>Bắc Ninh</td>
+        </tr>
+        <tr>
+            <td>Nguyễn Trúc Mai</td>
+            <td>Nữ</td>
+            <td>Hải Phòng</td>
+        </tr>
+    </table>
+    <div class="image-container">
+        <img src="https://cdn.pixabay.com/photo/2016/11/22/19/03/beach-1850059_1280.jpg" width="600", height="400">
+        <img src="https://photo.znews.vn/w660/Uploaded/ofh_btgazstm/2018_07_19/hoanghoncalifornia1.jpg" width="600", height="400">
+        <img src="https://bloganchoi.com/wp-content/uploads/2022/01/anh-hoang-hon-1-3-696x435.jpg" width="600", height="400">
+    </div>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>
