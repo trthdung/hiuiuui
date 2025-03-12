@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f8f8f8;
+        }
+        .topnav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .topnav a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .topnav a:hover {
+            background-color: #04AA6D;
+        }
+        .topnav a:first-child {
+            background-color: #04AA6D;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: #f1f1f1;
+            padding-top: 60px;
+            position: fixed;
+            overflow-y: auto;
+            top: 50px;
+        }
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background: #ddd;
+        }
+        .sidebar a:first-child {
+            background-color: #04AA6D;
+            color: white;
+            border-radius: 5px;
+        }
+        .content {
+            margin-left: 240px;
+            margin-top: 70px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .content h1 {
+            font-size: 24px;
+        }
+        .box {
+            background: #e6f7e6;
+            padding: 20px;
+            border-left: 4px solid #04AA6D;
+            margin-top: 20px;
+        }
+        .nav-buttons {
+            margin-top: 10px;
+        }
+        .nav-buttons a {
+            display: inline-block;
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .example-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .code-box {
+            background-color: #ffffff;
+            border-left: 4px solid green;
+            padding: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .btn-run {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .btn-run:hover {
+            background-color: #038554;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: #526ddc;
+            }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#">SQL</a>
+        <a href="#">PYTHON</a>
+        <a href="#">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">Khởi động</a>
+        <a href="#">Phản ứng</a>
+        <a href="#">MY SQL</a>
+        <a href="#">JQUERY</a>
+    </div>
+        <div class="sidebar">
+        <a href="#", style="font-size: 20;"><b>Hướng dẫn HTML</b></a>
+        <a href="#">Trang chủ HTML</a>
+        <a href="#">Giới thiệu HTML</a>
+        <a href="#">Trình biên tập HTML</a>
+        <a href="#">HTML cơ bản</a>
+        <a href="#">Các phần tử HTML</a>
+        <a href="#">Thuộc tính HTML</a>
+        <a href="#">Tiêu đề HTML</a>
+        <a href="#">Đoạn văn HTML</a>
+        <a href="#">Kiểu HTML</a>
+        <a href="#">Định dạng HTML</a>
+        <a href="#">Trích dẫn HTML</a>
+        <a href="#">Bình luận HTML</a>
+        <a href="#">Màu HTML</a>
+        <a href="#">HTML & CSS</a>
+        <a href="#">Liên kết HTML</a>
+        <a href="#">Hình ảnh HTML</a>
+        <a href="#">Biểu tượng HTML</a>
+        <a href="#">Tiêu đề trang HTML</a>
+        <a href="#">Bảng HTML</a>
+        <a href="#">Danh sách HTML</a>
+        <a href="#">Khối HTML & Nội tuyến</a>
+        <a href="#">Phân chia HTML</a>
+        <a href="#">Các lớp HTML</a>
+    </div>
+    <div class="content">
+        <h1>HTML Tutorial</h1>
+        <div class="nav-buttons">
+            <a href="#">&lt; Home</a>
+            <a href="#" style="float: right;">Next &gt;</a>
+        </div>
+        <div class="box">
+            <p>HTML is the standard markup language for Web pages.</p>
+            <p>With HTML you can create your own Website.</p>
+            <p>HTML is easy to learn - You will enjoy it!</p>
+        </div>
+        <h2>Học dễ dàng với HTML "Hãy tự mình thử"</h2>
+        <p>Với trình soạn thảo "Tự thử" của chúng tôi, bạn có thể chỉnh sửa mã HTML và xem kết quả:</p>
+        
+        <div class="example-container">
+            <h3>Ví dụ</h3>
+            <div class="code-box">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+                &nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </div>
+            <button class="btn-run" onclick="runExample()">Hãy tự mình thử »</button>
+        </div>
+    
+        <script>
+            function runExample() {
+                let code = `<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+    </body>
+    </html>`;
+                let newWindow = window.open();
+                newWindow.document.open();
+                newWindow.document.write(code);
+                newWindow.document.close();
+            }
+        </script>
+            <a href="index.html" class="back-home">Quay về trang chủ</a>
+
+    </div>
+
+</body>
+</html>
