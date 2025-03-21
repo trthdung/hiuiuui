@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design UI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 100vh;
+            background-color: #f8f4ff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            gap: 15px;
+        }
+
+        .menu-item {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .menu-item i {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .menu-item span {
+            font-size: 12px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background-color: #e1bee7;
+        }
+        .content {
+            margin-left: 120px;
+            padding: 30px;
+            width: 100%;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            background-color: #f8eefc;
+            padding: 40px;
+            border-radius: 15px;
+            gap: 20px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            color: #222;
+        }
+
+        .hero-text p {
+            font-size: 25px;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background-color: #673ab7;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .hero-video video {
+            width: 600px;
+            border-radius: 20px;
+        }
+        .news {
+            margin-top: 40px;
+        }
+
+        .news h2 {
+            font-size: 32px;
+            color: #222;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-image {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img1 { background-image: url('https://images.pond5.com/abstract-colorful-fluid-background-animation-footage-281225163_iconl.jpeg'); }
+        .img2 { background-image: url('https://pbs.twimg.com/amplify_video_thumb/1892336592041246721/img/561ltU3_W1O9sDwe.jpg'); }
+        .img3 { background-image: url('https://cdn-thumbs.ohmyprints.net/1/16cef358d64db1a9fc9e4f86c8e785e5/360x360/thumbnail/fit.jpg'); }
+        .img4 { background-image: url('https://media.istockphoto.com/id/1387621990/sv/vektor/vector-illustration-abstract-contemporary-aesthetic-backgrounds-design-for-cover-poster.jpg?s=170667a&w=0&k=20&c=r269HBpaufxyBYjg-oVuXqiaEpqaFEJ3IS91HKRC4dY='); }
+        .img5 { background-image: url('https://lianna-adams.com/wp-content/uploads/2022/12/Lianna_Red-Sea-1024x1024.png'); }
+        .img6 { background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/afa2b285573235.Y3JvcCwxMDA3LDc4OCwxOTcsMA.jpg'); }
+        
+        .card h3, .card p {
+            padding: 10px;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: #526ddc;
+            }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="menu-item search"><i class="ph ph-magnifying-glass"></i></div>
+        <div class="menu-item active"><i class="ph ph-google-chrome-logo"></i><span>Home</span></div>
+        <div class="menu-item"><i class="ph ph-grid-four"></i><span>Get started</span></div>
+        <div class="menu-item"><i class="ph ph-code"></i><span>Develop</span></div>
+        <div class="menu-item"><i class="ph ph-bookmark-simple"></i><span>Foundations</span></div>
+        <div class="menu-item"><i class="ph ph-palette"></i><span>Styles</span></div>
+        <div class="menu-item"><i class="ph ph-plus-circle"></i><span>Components</span></div>
+        <div class="menu-item"><i class="ph ph-star"></i><span>Blog</span></div>
+        <div class="menu-item">
+            <i class="ph ph-columns"></i>
+        </div>
+        <div class="menu-item">
+            <i class="ph ph-moon"></i>
+        </div>
+    </nav>
+
+    <main class="content">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Material Design</h1>
+                <p>Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.</p>
+                <button class="btn">Get started</button>
+            </div>
+            <div class="hero-video">
+                <video src="https://kstatic.googleusercontent.com/files/65da8f0326427a8e71bfa678348f3fa1a4bb1660e0b013591eb3bfd9df455bd5a3334249de61229029be7d2fd7cf18d4e143728b7e0702b6bde6251a9c64511a" alt="Material Design">
+            </div>
+        </section>
+        
+        <section class="news">
+            <h2>News & launches</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image img1"></div>
+                    <h3>Material Design at Google I/O</h3>
+                    <p>See the full list of Material talks and tutorials launching at I/O 2024</p>
+                </div>
+                <div class="card">
+                    <div class="card-image img2"></div>
+                    <h3>How to get Google Fonts</h3>
+                    <p>New API updates and website upgrades make font integration easier then ever</p>
+                </div>
+                <div class="card">
+                    <div class="card-image img3"></div>
+                    <h3>Figma M3 Design Kit</h3>
+                    <p>Start designing and prototyping with the complete M3 library of read-make components</p>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <h2>Design system updates</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-image img4"></div>
+                    <h3>Content design</h3>
+                    <p>Guidance and best practices for UX writing and information design</p>
+                </div>
+                <div class="card">
+                    <div class="card-image img5"></div>
+                    <h3>New component: Carousel</h3>
+                    <p>An expressive new way to display a horizontally scrolling collection of content</p>
+                </div>
+                <div class="card">
+                    <div class="card-image img6"></div>
+                    <h3>M3 for Jetpack Compose</h3>
+                    <p>With the latest stable release, use Jetpack Compose to build a complete M3 Android app</p>
+                </div>
+            </div>
+        </section>
+        <a href="index.html" class="back-home">Quay về trang chủ</a>
+    </main>
+    
+</body>
+</html>
