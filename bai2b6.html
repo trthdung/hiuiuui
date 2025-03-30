@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalium Style Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: black;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .menu li {
+            position: relative;
+            padding: 10px 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+        }
+        .menu a:hover {
+            color: #ffcc00;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            list-style: none;
+            padding: 0;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+        }
+        .dropdown-menu li {
+            padding: 10px;
+        }
+        .menu li:hover .dropdown-menu {
+            display: block;
+        }
+        .banner {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: gray;
+            margin-bottom: 20px;
+        }
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            width: 250px;
+            text-align: left;
+            position: relative;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        .product-category {
+            color: gray;
+            font-size: 14px;
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            float: right;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: #526ddc;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Kalium</div>
+        <nav>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">Home ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Home fullscreen</a></li>
+                        <li><a href="#">Home parallax</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Shop ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Variants</a></li>
+                        <li><a href="#">Pagination</a></li>
+                        <li><a href="#">Cart Icon</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Product ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Simple Product</a></li>
+                        <li><a href="#">Variable Product</a></li>
+                        <li><a href="#">External Product</a></li>
+                        <li><a href="#">Grouped Product</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">News ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sidebar Right</a></li>
+                        <li><a href="#">Sidebar Left</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Pages ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Checkout</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Buy Now </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <img src="https://demo.kaliumtheme.com/fashion/wp-content/uploads/2016/12/home_slider_2.png" alt="Fashion Banner">
+    </div>
+    <div class="container">
+        <h2>New Arrivals</h2>
+        <p class="subtitle">Latest From our Store</p>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://allriot.com/wp-content/uploads/2020/05/the-system-isnt-broken-it-was-built-this-way-t-shirt-1200x1491.jpg", width="500", height="500" alt="Broken T Shirt">
+                <p class="product-name">Broken T Shirt <span class="product-price">$9</span></p>
+                <p class="product-category">Men, T Shirts</p>
+            </div>
+            <div class="product">
+                <img src="https://i.etsystatic.com/6199366/r/il/18a462/3865407806/il_570xN.3865407806_5sfs.jpg", width="500", height="500" alt="Knickerboxer">
+                <p class="product-name">Knickerboxer <span class="product-price">$25</span></p>
+                <p class="product-category">Men, Sweaters</p>
+            </div>
+            <div class="product">
+                <img src="https://www.fransboonestore.com/cdn/shop/products/156A6641.jpg?v=1649171838", width="500", height="500" alt="Studio Belt">
+                <p class="product-name">Studio Belt <span class="product-price">$7</span></p>
+                <p class="product-category">Accessories</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_DsKHZZTwEpjNsrFlgzZ7thkMnKV8mxBNqw&s", width="500", height="500" alt="Chambray Shirt">
+                <p class="product-name">Chambray Shirt <span class="product-price">$29</span></p>
+                <p class="product-category">Men, Sweaters</p>
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Overlay & Before-After Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #b5b5b5;
+            text-align: center;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 100;
+            color: white;
+        }
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s ease-in-out;
+        }
+        .menu-overlay.active {
+            transform: scaleY(1);
+        }
+        .menu-overlay a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            margin: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-overlay a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-overlay a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .before-after {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            height: 400px;
+            background: url('before.jpg') no-repeat center/cover;
+        }
+        .before-after::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            background: url('after.jpg') no-repeat center/cover;
+            transition: 0.3s;
+        }
+        .before-after:hover::before {
+            left: 40%; 
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+        .item1 { grid-column: span 2; grid-row: span 1; }
+        .item2 { grid-column: span 1; grid-row: span 1; }
+        .item3 { grid-column: span 1; grid-row: span 2; }
+        .item4 { grid-column: span 1; grid-row: span 1; }
+        .item5 { grid-column: span 2; grid-row: span 1; }
+        .item6 { grid-column: span 1; grid-row: span 1; }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .back-home:hover {
+            background-color: #526ddc;
+            }
+    </style>
+</head>
+<body>
+    <div class="menu-btn" onclick="document.querySelector('.menu-overlay').classList.toggle('active')">☰</div>
+    
+    <div class="menu-overlay">
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Team</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="#">Buy Now!</a>
+    </div>
+
+    <div class="before-after"></div>
+    <div class="gallery">
+        <img src="https://img.muji.net/img/item/4550182583175_1260.jpg" alt="Project 1" class="item1">
+        <img src="https://noithattavico.com/wp-content/uploads/2025/03/elegant-comosition-of-masculine-room-decor-2023-11-27-04-54-41-utc-1.jpg" alt="Project 2" class="item2">
+        <img src="https://domidoor.com/aibfiles/images/ghe-go-thong.jpeg" alt="Project 3" class="item3">
+        <img src="https://kdesign.vn/wp-content/uploads/2022/10/noi-that-rustic.jpg" alt="Project 4" class="item4">
+        <img src="https://down-vn.img.susercontent.com/file/03f5037987c82ecf49076bb79655751d" alt="Project 5" class="item5">
+        <img src="https://down-vn.img.susercontent.com/file/5fa85781c53519a37bf0cc09e2629b88" alt="Project 6" class="item6">
+    </div>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>
