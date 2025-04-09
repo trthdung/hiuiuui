@@ -182,15 +182,21 @@
                     <li><a href="bai3b6.html">Bài tập 3</a></li>
                 </ul>
             </div>
+            <div id="buoi8" class="buoi">
+                <ul>
+                     <li><a href="bai1b8.html">Bài tập 1 c1</a></li>
+                    <li><a href="bai1c2b8.html">Bài tập 1 c2</a></li>
+                    <li><a href="bai2b8.html">Bài tập 2</a></li>
+                    <li><a href="bai3b8.html">Bài tập 3</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
     <script>
         function showContent(id) {
             document.querySelectorAll('.content').forEach(el => el.classList.remove('show'));
             document.getElementById(id).classList.add('show');
         }
-
         function showBuoi() {
             let selectedBuoi = document.getElementById("buoi").value;
             
@@ -201,8 +207,6 @@
                 buoiToShow.classList.add('show');
             }
         }
-
-        // Đảm bảo khi tải trang, chỉ hiển thị Buổi 1
         document.addEventListener("DOMContentLoaded", function() {
             showBuoi();
         });
