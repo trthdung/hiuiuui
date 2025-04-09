@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trò chơi đoán số</title>
+</head>
+<style>.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.back-home:hover {
+    background-color: #526ddc;
+    }</style>
+<body>
+    <h2>Hãy đoán xem! (từ 1 đến 10)</h2>
+    <input type="number" id="guessInput" min="1" max="10" placeholder="Nhập số từ 1-10">
+    <button onclick="guessNumber()">Đoán</button>
+    <p id="message"></p>
+    <script src="b3jsb8.js"></script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>

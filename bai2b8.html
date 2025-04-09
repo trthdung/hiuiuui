@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tìm số lớn nhất và nhỏ nhất</title>
+</head>
+<style>.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.back-home:hover {
+    background-color: #526ddc;
+    }</style>
+<body>
+    <h2>Nhập vào dãy số (cách nhau bằng dấu phẩy):</h2>
+    <input type="text" id="numberInput" placeholder="Ví dụ: 5, 10, 3, 21, 8">
+    <button onclick="findMaxMin()">Tìm số lớn nhất và nhỏ nhất</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findMaxMin() {
+            const input = document.getElementById("numberInput").value;
+            const numberArray = input.split(',').map(num => parseFloat(num.trim()));
+
+            if (numberArray.some(isNaN)) {
+                document.getElementById("result").innerText = "Vui lòng nhập đúng định dạng số!";
+                return;
+            }
+            const max = Math.max(...numberArray);
+            const min = Math.min(...numberArray);
+            document.getElementById("result").innerText = 
+                `Số lớn nhất: ${max} | Số nhỏ nhất: ${min}`;
+        }
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>
