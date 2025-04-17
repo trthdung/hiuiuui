@@ -2,72 +2,45 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Slide Show</title>
+  <title>Slideshow</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background-color: black;
-    }
-
     .slideshow-container {
       position: relative;
-      width: 100%;
-      height: 100%;
+      max-width: 600px;
+      margin: auto;
     }
 
     .slide {
       display: none;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
     }
 
-    .slide img {
+    img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
+
     .prev, .next {
       cursor: pointer;
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
+      width: auto;
+      padding: 30px;
+      margin-top: -22px;
       color: white;
-      font-size: 24px;
       font-weight: bold;
-      border: 2px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
       user-select: none;
-      z-index: 10;
-      transition: background-color 0.3s, border-color 0.3s;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
     }
 
     .prev:hover, .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
-      border-color: #ccc;
-    }
-
-    .prev {
-      left: 20px;
-    }
-
-    .next {
-      right: 20px;
     }
     .back-home {
     display: inline-block;
@@ -85,46 +58,52 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="slideshow-container">
     <div class="slide">
-      <img src="https://media.istockphoto.com/id/843314332/vi/anh/studio-%C4%91en-tr%E1%BA%AFng-ch%E1%BB%A5p-b%E1%BB%A9c-t%C6%B0%E1%BB%A3ng-b%C3%A1n-th%C3%A2n-c%E1%BB%A7a-ng%C6%B0%E1%BB%9Di-m%E1%BA%ABu-n%E1%BB%AF-xinh-%C4%91%E1%BA%B9p-%C4%91%C3%B3ng-gi%E1%BA%A3-n%E1%BB%AF-th%E1%BA%A7n-hy-l%E1%BA%A1p-c%E1%BB%95-%C4%91%E1%BA%A1i.jpg?s=612x612&w=is&k=20&c=eIQ9xq5U6EJMQzcRzzqj81rgmdXMJMit7TKFWR2N_dg=" alt="Ảnh 1">
+      <img src="https://media.istockphoto.com/id/843314396/photo/black-and-white-studio-shot-bust-of-beautiful-female-model-posing-as-ancient-greek-goddess.jpg?s=612x612&w=is&k=20&c=YBkNer6UBHXq6rwoP7KQURwhdBSszYIXO4vjrq9teTQ=" alt="Ảnh 1">
     </div>
     <div class="slide">
-      <img src="https://media.istockphoto.com/id/843314208/photo/black-and-white-studio-shot-bust-of-beautiful-female-model-posing-as-ancient-greek-goddess.jpg?s=612x612&w=is&k=20&c=ktCHZWePHqlU-6q_9_8Y4nUKvWojts0NIlLeu2vRrtU=" alt="Ảnh 2">
+      <img src="https://media.istockphoto.com/id/843314332/vi/anh/studio-%C4%91en-tr%E1%BA%AFng-ch%E1%BB%A5p-b%E1%BB%A9c-t%C6%B0%E1%BB%A3ng-b%C3%A1n-th%C3%A2n-c%E1%BB%A7a-ng%C6%B0%E1%BB%9Di-m%E1%BA%ABu-n%E1%BB%AF-xinh-%C4%91%E1%BA%B9p-%C4%91%C3%B3ng-gi%E1%BA%A3-n%E1%BB%AF-th%E1%BA%A7n-hy-l%E1%BA%A1p-c%E1%BB%95-%C4%91%E1%BA%A1i.jpg?s=612x612&w=is&k=20&c=eIQ9xq5U6EJMQzcRzzqj81rgmdXMJMit7TKFWR2N_dg=" alt="Ảnh 2">
     </div>
     <div class="slide">
       <img src="https://media.istockphoto.com/id/843314320/photo/black-and-white-studio-shot-bust-of-beautiful-female-model-posing-as-ancient-greek-goddess.jpg?s=612x612&w=is&k=20&c=p0myk1-wleSlKPiPywGbmvIi7F6-RZs1Ws-aDesoO3Y=" alt="Ảnh 3">
     </div>
-
-
-    <div class="prev" onclick="nextSlide()">&#10094;</div>
-    <div class="next" onclick="prevSlide()">&#10095;</div>
+    <div class="slide">
+        <img src="https://media.istockphoto.com/id/843314356/photo/black-and-white-studio-shot-bust-of-beautiful-female-model-posing-as-ancient-greek-goddess.jpg?s=612x612&w=is&k=20&c=RdlfqSF6_aXr6N67-YeDAdva4ALYb6VXGl7oI0OdAjs=" alt="Ảnh 4">
+      </div>
+    <a class="prev" onclick="nextSlide()">&#10094;</a>
+    <a class="next" onclick="prevSlide()">&#10095;</a>
   </div>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
+    let currentSlideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
 
     function showSlide(index) {
-      slides.forEach(slide => slide.style.display = "none");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
       slides[index].style.display = "block";
     }
 
     function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      showSlide(currentSlideIndex);
     }
 
     function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+      showSlide(currentSlideIndex);
     }
 
-    
-    showSlide(currentSlide);
+
+    showSlide(currentSlideIndex);
   </script>
+   <div class="center-button"></div>
    <a href="index.html" class="back-home">Quay về trang chủ</a>
+
 </body>
 </html>
