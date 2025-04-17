@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Phép toán + Đổi màu JS</title>
+    <style>
+      input[type="number"] {
+        width: 50px;
+        text-align: center;
+      }
+      .result {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+      #history span {
+        margin-right: 15px;
+      }
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      .back-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.back-home:hover {
+    background-color: #526ddc;
+    }
+    </style>
+  </head>
+  <body>
+    <h3>6.2 Thực hiện phép tính và đổi màu phép tính vừa thực hiện</h3>
+
+    <h4>các phép toán</h4>
+
+    <div>
+      phép cộng
+      <input id="add1" type="number" value="3" /> +
+      <input id="add2" type="number" value="3" /> =
+      <span id="addResult" class="result">6</span>
+      <button onclick="calculate('add')">=</button>
+    </div>
+
+    <div>
+      phép trừ
+      <input id="sub1" type="number" value="3" /> -
+      <input id="sub2" type="number" value="3" /> =
+      <span id="subResult" class="result">0</span>
+      <button onclick="calculate('sub')">=</button>
+    </div>
+
+    <div>
+      phép nhân
+      <input id="mul1" type="number" value="3" /> *
+      <input id="mul2" type="number" value="3" /> =
+      <span id="mulResult" class="result">9</span>
+      <button onclick="calculate('mul')">=</button>
+    </div>
+
+    <div>
+      phép chia
+      <input id="div1" type="number" value="3" /> /
+      <input id="div2" type="number" value="3" /> =
+      <span id="divResult" class="result">1</span>
+      <button onclick="calculate('div')">=</button>
+    </div>
+
+    <h4>Các phép toán vừa thực hiện</h4>
+    <div id="history">
+      <span id="hisAdd">PHÉP CỘNG 3+3=6</span>
+      <span id="hisSub">PHÉP TRỪ 3-3=0</span>
+      <span id="hisMul">PHÉP NHÂN 3*3=9</span>
+      <span id="hisDiv">PHÉP CHIA 3/3=1</span>
+    </div>
+
+    <script>
+      function calculate(op) {
+        // Reset tất cả màu
+        document
+          .querySelectorAll("#history span")
+          .forEach((span) => span.classList.remove("highlight"));
+
+        let a, b, result, text;
+        if (op === "add") {
+          a = +document.getElementById("add1").value;
+          b = +document.getElementById("add2").value;
+          result = a + b;
+          document.getElementById("addResult").innerText = result;
+          text = `PHÉP CỘNG ${a}+${b}=${result}`;
+          document.getElementById("hisAdd").innerText = text;
+          document.getElementById("hisAdd").classList.add("highlight");
+        } else if (op === "sub") {
+          a = +document.getElementById("sub1").value;
+          b = +document.getElementById("sub2").value;
+          result = a - b;
+          document.getElementById("subResult").innerText = result;
+          text = `PHÉP TRỪ ${a}-${b}=${result}`;
+          document.getElementById("hisSub").innerText = text;
+          document.getElementById("hisSub").classList.add("highlight");
+        } else if (op === "mul") {
+          a = +document.getElementById("mul1").value;
+          b = +document.getElementById("mul2").value;
+          result = a * b;
+          document.getElementById("mulResult").innerText = result;
+          text = `PHÉP NHÂN ${a}*${b}=${result}`;
+          document.getElementById("hisMul").innerText = text;
+          document.getElementById("hisMul").classList.add("highlight");
+        } else if (op === "div") {
+          a = +document.getElementById("div1").value;
+          b = +document.getElementById("div2").value;
+          if (b === 0) {
+            result = "NaN";
+          } else {
+            result = a / b;
+          }
+          document.getElementById("divResult").innerText = result;
+          text = `PHÉP CHIA ${a}/${b}=${result}`;
+          document.getElementById("hisDiv").innerText = text;
+          document.getElementById("hisDiv").classList.add("highlight");
+        }
+      }
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>  </body>
+</html>
