@@ -126,9 +126,10 @@
                     <option value="buoi3">Buổi 3</option>
                     <option value="buoi4">Buổi 4</option>
                     <option value="buoi5">Buổi 5</option>
-                    <option value="buoi6">Buổi 6</option>
-                    <option value="buoi7">Buổi 7</option>
-                    <option value="buoi8">Buổi 8</option>
+                     <option value="buoi6">Buổi 6</option>
+                     <option value="buoi7">Buổi 7</option>
+                     <option value="buoi8">Buổi 8</option>
+                     <option value="buoi9">Buổi 9</option>
                 </select>
             </div>
 
@@ -192,13 +193,23 @@
                     <li><a href="bai3b8.html">Bài tập 3</a></li>
                 </ul>
             </div>
+            <div id="buoi9" class="buoi">
+                <ul>
+                     <li><a href="bai4b9.html">Bài tập 4</a></li>
+                    <li><a href="bai5b9.html">Bài tập 5</a></li>
+                    <li><a href="bai6.1b9.html">Bài tập 6.1</a></li>
+                    <li><a href="bai6.2b9.htm">Bài tập 6.2</a></li>
+                </ul>
+            </div>
         </div>
     </div>
+
     <script>
         function showContent(id) {
             document.querySelectorAll('.content').forEach(el => el.classList.remove('show'));
             document.getElementById(id).classList.add('show');
         }
+
         function showBuoi() {
             let selectedBuoi = document.getElementById("buoi").value;
             
