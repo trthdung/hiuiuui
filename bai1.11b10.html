@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<style>.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.back-home:hover {
+  background-color: #526ddc;
+  }</style>
+<html>
+  <body>
+    <div id="container">
+      <h1 id="heading1">Xin chào CNTT 2024</h1>
+    </div>
+    <script>
+      var pt = document.getElementById("heading1");
+      var old = pt.innerHTML;
+      document.write("Giá trị h1 cũ là: " + old);
+      pt.innerHTML = "Học nghiêm túc và chăm chỉ hơn";
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+  </body>
+</html>

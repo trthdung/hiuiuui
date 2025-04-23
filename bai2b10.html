@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu đa cấp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .menu {
+      width: 200px;
+    }
+
+    .menu > button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submenu {
+      display: none;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .submenu div {
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .submenu div:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<style>.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.back-home:hover {
+  background-color: #526ddc;
+  }</style>
+<body>
+
+<div class="menu">
+  <button onclick="toggleMenu()">Thiết kế web</button>
+  <div id="submenu" class="submenu">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>Javascript</div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var submenu = document.getElementById("submenu");
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+  }
+</script>
+</script>
+<a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>

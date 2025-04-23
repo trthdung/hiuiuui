@@ -1,0 +1,32 @@
+<html lang="vi">
+    <style>.back-home {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #d63384;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      .back-home:hover {
+        background-color: #526ddc;
+        }</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị giá trị</title>
+</head>
+<body>
+    <h2>hi</h2>
+    <p>Xin chào!</p>
+    <p>Trần Thuỳ Dung</p>
+    <p id="demo"></p>
+    <script>
+        var x=document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML= 'the text in first paragraph (index 0) is: '+x[0].innerHTML;
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+</body>
+</html>

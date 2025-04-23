@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<style>.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.back-home:hover {
+  background-color: #526ddc;
+  }</style>
+<html>
+  <body>
+    <h2>thay thế node ở vị trí xác định: replaceChild</h2>
+    <div id="container">
+      <p id="p1">xin chào</p>
+      <p id="p2">Trần Thuỳ Dung</p>
+    </div>
+    <button onclick="changenode()">Change Node</button>
+    <script>
+      function changenode() {
+        var node = document.createElement('div');
+        node.innerText = "Trần Thuỳ Dung";
+        var x = document.getElementById('container');
+        var y = document.getElementById('p2');
+        x.replaceChild(node, y);
+      }
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+  </body>
+</html>

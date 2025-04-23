@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<style>.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.back-home:hover {
+  background-color: #526ddc;
+  }</style>
+<html>
+  <body>
+    <h2>Add ảnh</h2>
+    <div id="bo"></div>
+    <button onclick="addnode_img();">Add Image</button>
+    <script>
+      function addnode_img() {
+        var pt = document.createElement('img');
+        pt.src = "https://cdn.tgdd.vn/Files/2022/12/09/1494632/nguon-goc-dac-diem-cach-nuoi-gia-ban-meo-scottish-202212090111101131.jpg";
+        document.getElementById("bo").appendChild(pt);
+      }
+    </script>
+    <a href="index.html" class="back-home">Quay về trang chủ</a>
+  </body>
+</html>
